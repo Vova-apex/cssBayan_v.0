@@ -1,6 +1,5 @@
 body {
     font-family: Arial, sans-serif;
-    te
     /* font-size: 16px;
     line-height: 1.5;
     background-color: #0e0e15; */
@@ -13,7 +12,7 @@ body {
 }
 
 .wrapper {
-    max-width: 500px;
+    max-width: 320px;
     margin: 0 auto;
 }
 
