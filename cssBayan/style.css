@@ -1,80 +1,69 @@
-@import url(./reset.css);
+@import url(reset.css);
 body {
-    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: blue;
+    /* color: blue; */
+    /* flex-direction: column; */
 }
 
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
+body :hover {
+    color: black;
 }
 
-.bayan {
-    max-width: 320px;
-    margin: 20px auto;
+.bayan-item,
+.bayan-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    color: black;
+    font-weight: 600;
+}
+
+h1,
+.bayan-title {
+    font-weight: 600;
 }
 
 img {
-    max-width: 100%;
-    margin: auto;
-}
-
-.bayan:hover {
-    font-weight: bold;
-}
-
-.bayan-item {
-    margin-bottom: 5px;
-    border: 1px #dd1717;
-    border-style: none none solid none;
+    max-width: 0rem;
+    transition: max-width 500ms;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
 }
 
 .bayan-title {
+    padding: 0.1rem 0.5rem;
     display: block;
-    padding: 20px;
-    position: relative;
+    align-self: start;
+    width: 100%;
+    cursor: pointer;
+    font-size: calc(1.5rem + 0.25vw);
+    transition: transform 100ms, background-color 100ms;
 }
 
-.bayan-title:hover {}
 
-.bayan-title:hover~.bayan-mem {
+/* .bayan-title:hover {
+    transform: scale(1.01);
+} */
+
+.bayan-title:hover>img {
     display: block;
+    max-width: 10rem;
+    margin: 0.5rem auto;
 }
 
 .bayan-input {
-    width: 0;
-    height: 0;
-    appearance: none;
-    position: absolute;
-}
-
-.bayan-input:checked~.bayan-mem {
-    display: block;
-}
-
-.bayan-input:checked~.bayan-title {
-    /* background-color: #dfcaca; */
-    /* font-weight: bold; */
-}
-
-.bayan-mem {
     display: none;
-    padding: auto;
-    /* max-width: 100%; */
 }
 
-.bayan-title:after {
-    content: "+";
+.bayan-input:checked+.bayan-title img {
     display: block;
-    position: absolute;
-    top: 30%;
-    right: 15px;
-}
-
-.bayan-input:hover~.bayan-title:after {
-    content: "x";
-}
-
-.bayan-input:checked~.bayan-title:after {
-    content: "x";
+    max-width: 20rem;
+    margin: 0.5rem auto;
 }
