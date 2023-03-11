@@ -1,0 +1,69 @@
+@import url(reset.css);
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: blue;
+    /* color: blue; */
+    /* flex-direction: column; */
+}
+
+body :hover {
+    color: black;
+}
+
+.bayan-item,
+.bayan-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    color: black;
+    font-weight: 600;
+}
+
+h1,
+.bayan-title {
+    font-weight: 600;
+}
+
+img {
+    max-width: 0rem;
+    transition: max-width 500ms;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+}
+
+.bayan-title {
+    padding: 0.1rem 0.5rem;
+    display: block;
+    align-self: start;
+    width: 100%;
+    cursor: pointer;
+    font-size: calc(1.5rem + 0.25vw);
+    transition: transform 100ms, background-color 100ms;
+}
+
+
+/* .bayan-title:hover {
+    transform: scale(1.01);
+} */
+
+.bayan-title:hover>img {
+    display: block;
+    max-width: 10rem;
+    margin: 0.5rem auto;
+}
+
+.bayan-input {
+    display: none;
+}
+
+.bayan-input:checked+.bayan-title img {
+    display: block;
+    max-width: 20rem;
+    margin: 0.5rem auto;
+}
