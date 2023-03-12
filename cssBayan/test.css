@@ -1,0 +1,92 @@
+span {
+    display: block;
+    background-image: url(./assets/icon/cross-23.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: calc(1rem + 0.75vw);
+    cursor: pointer;
+    transform: rotate(45deg);
+    transition: transform 500ms;
+    margin-left: 0.5rem;
+}
+
+label>div {
+    display: flex;
+    justify-content: space-between;
+}
+
+section section {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+input:checked+label img {
+    display: block;
+    max-width: 20rem;
+    margin: 0.5rem auto;
+}
+
+input:checked~label>div span {
+    transform: rotate(0deg);
+    transition: transform 500ms;
+}
+
+label:active {
+    background-color: cadetblue;
+    transition: background-color 100ms;
+}
+
+@media(any-hover: hover) {
+    label:hover>img {
+        display: block;
+        max-width: 10rem;
+        margin: 0.5rem auto;
+    }
+    label:hover>div span {
+        transform: rotate(0deg);
+        transition: transform 500ms;
+    }
+    label:hover {
+        transform: scale(1.01);
+        box-shadow: 0.1rem 0 0.5rem rgba(255, 255, 255, 0.461);
+    }
+}
+
+/_ mobile 320x568,
+tablet 820x1180,
+desktop 1920×1080 _/ @media (min-width: 320px) {
+    html {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    h1 {
+        font-size: calc(1rem + 0.25vw);
+    }
+    label {
+        font-size: calc(1rem + 0.25vw);
+    }
+}
+
+@media (min-width: 820px) {
+    html {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    h1 {
+        font-size: calc(1.5rem + 0.25vw);
+    }
+    label {
+        font-size: calc(1.5rem + 0.25vw);
+    }
+}
+
+@media (min-width: 1900px) {
+    html {
+        font-family: 'Courier New', Courier, monospace, sans-serif;
+    }
+    h1 {
+        font-size: calc(1.8rem + 0.25vw);
+    }
+    label {
+        font-size: calc(1.8rem + 0.25vw);
+    }
+}
