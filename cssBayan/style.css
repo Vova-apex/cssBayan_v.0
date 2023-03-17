@@ -6,7 +6,7 @@ body {
     background: url(./assets/img/QWEqwewewe_background_internet_meme_9a1136b9-2aeb-4d52-9de3-4c6b00371a6f.png);
     background-size: cover;
     background-position: 10% center;
-    background-repeat: no-repeat;
+    background-repeat: #aaa;
     object-fit: cover;
     height: 100vh;
     overflow: hidden;
@@ -16,7 +16,8 @@ main {
     height: auto;
     padding: 1vw;
     backdrop-filter: blur(1vw);
-    background-color: rgba(0, 0, 0, 0.212);
+    background-image: #aaa;
+    /* background-color: #00000038; */
     border-radius: 0.5rem;
 }
 
@@ -41,7 +42,8 @@ h1 {
 
 img {
     max-width: 0rem;
-    transition: max-width 500ms;
+    transition: max-width calc(1s/2);
+    /*500ms*/
     margin: 0 auto;
 }
 
